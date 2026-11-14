@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jm6hcbqitjya" path="res://pekerja.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://cjtsffhntf475" path="res://lava big.png" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://d1umbgjersrx5" path="res://wall.png" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dcuj63fcaacdn" path="res://concrete board.png" id="5_lquwl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5cnf4"]
 animations = [{
@@ -791,7 +792,7 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_5cnf4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1609280946]
-position = Vector2(-0.5, 0)
+position = Vector2(100, 21)
 shape = SubResource("RectangleShape2D_xur1g")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1050252584]
@@ -802,3 +803,18 @@ tile_set = SubResource("TileSet_lrwe8")
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=1932482176]
 tile_set = SubResource("TileSet_fhj36")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=614756334]
+position = Vector2(-330, 9)
+scale = Vector2(3.2500002, 2.125)
+texture = ExtResource("5_lquwl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=746472838]
+position = Vector2(-115, -77)
+scale = Vector2(3.2500002, 2.125)
+texture = ExtResource("5_lquwl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2122571905]
+position = Vector2(234, -64)
+scale = Vector2(3.2500002, 2.125)
+texture = ExtResource("5_lquwl")
