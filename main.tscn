@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dcuj63fcaacdn" path="res://concrete board.png" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://6bhobc2pubmq" path="res://brick wall.png" id="6_272bh"]
 [ext_resource type="Texture2D" uid="uid://bxuqsv4bsouku" path="res://door.png" id="7_5vw27"]
+[ext_resource type="Texture2D" uid="uid://cbco350846m7n" path="res://key2.png" id="8_5vw27"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5cnf4"]
 animations = [{
@@ -835,3 +836,9 @@ texture = ExtResource("6_272bh")
 position = Vector2(516, -130.00002)
 scale = Vector2(0.7109375, 0.703125)
 texture = ExtResource("7_5vw27")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1681603760]
+position = Vector2(222.00002, -83.00001)
+rotation = 1.5720551
+scale = Vector2(1.0625, 1)
+texture = ExtResource("8_5vw27")
