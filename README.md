@@ -1,4 +1,4 @@
 # The Floor Is Lava
-Arif is a dedicated employee, or "pekerja" in Malay, known for his unwavering punctuality. One day, while commuting to work, the ground beneath him suddenly turns into molten lava, forcing him to navigate a treacherous path to reach his destination safely and on time. 
+Kiko is a dedicated employee known for her unwavering punctuality. One day, while on her way to work, the ground beneath her suddenly turns into molten lava, forcing her to navigate a treacherous path to reach her destination safely and on time. 
 ## Tech Specification
-- Slingshot mechanism
+Players are only allowed to use the slingshot mechanism technique. By using the mouse to aim, players must bounce off platforms while simultaneously avoiding obstacles and hitting the floor.
