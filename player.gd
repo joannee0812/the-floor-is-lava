@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 50
 const JUMP_VELOCITY = -200.0
+var MAX_LENGTH := 200
 
 
 var screen_size: Vector2
