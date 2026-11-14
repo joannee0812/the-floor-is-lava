@@ -5,6 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://cjtsffhntf475" path="res://lava big.png" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://d1umbgjersrx5" path="res://wall.png" id="5_7mycd"]
 [ext_resource type="Texture2D" uid="uid://dcuj63fcaacdn" path="res://concrete board.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://6bhobc2pubmq" path="res://brick wall.png" id="6_272bh"]
+[ext_resource type="Texture2D" uid="uid://bxuqsv4bsouku" path="res://door.png" id="7_5vw27"]
+[ext_resource type="Texture2D" uid="uid://cbco350846m7n" path="res://key2.png" id="8_5vw27"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5cnf4"]
 animations = [{
@@ -778,10 +781,10 @@ sources/0 = SubResource("TileSetAtlasSource_kek77")
 [node name="Area2D" type="Area2D" parent="." unique_id=244823748]
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1554738007]
-offset_left = -573.0
-offset_top = -323.0
-offset_right = 573.0
-offset_bottom = 270.0
+offset_left = -570.0
+offset_top = -322.0
+offset_right = 576.0
+offset_bottom = 271.0
 texture = ExtResource("5_7mycd")
 stretch_mode = 1
 
@@ -807,16 +810,37 @@ tile_set = SubResource("TileSet_lrwe8")
 tile_set = SubResource("TileSet_fhj36")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=614756334]
-position = Vector2(-330, 9)
-scale = Vector2(3.2500002, 2.125)
+position = Vector2(-296, -11)
+scale = Vector2(4.21875, 2.65625)
 texture = ExtResource("5_lquwl")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=746472838]
-position = Vector2(-115, -77)
-scale = Vector2(3.2500002, 2.125)
+position = Vector2(-63.000008, -134)
+scale = Vector2(4.125, 2.59375)
 texture = ExtResource("5_lquwl")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2122571905]
-position = Vector2(234, -64)
-scale = Vector2(3.2500002, 2.125)
+position = Vector2(256, -76.99999)
+scale = Vector2(4.5000005, 2.7812502)
 texture = ExtResource("5_lquwl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1717557816]
+position = Vector2(-549, 17)
+scale = Vector2(1.6367189, 1.5546875)
+texture = ExtResource("6_272bh")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=259163802]
+position = Vector2(470.00003, 16)
+scale = Vector2(1.6367189, 1.5546875)
+texture = ExtResource("6_272bh")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1369010424]
+position = Vector2(516, -130.00002)
+scale = Vector2(0.7109375, 0.703125)
+texture = ExtResource("7_5vw27")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1681603760]
+position = Vector2(222.00002, -83.00001)
+rotation = 1.5720551
+scale = Vector2(1.0625, 1)
+texture = ExtResource("8_5vw27")
