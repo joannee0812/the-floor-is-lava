@@ -18,7 +18,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xur1g"]
-size = Vector2(133, 134)
+size = Vector2(62, 63)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
 texture = ExtResource("4_1bvp3")
@@ -775,6 +775,8 @@ sources/0 = SubResource("TileSetAtlasSource_kek77")
 
 [node name="Node" type="Node" unique_id=493332175]
 
+[node name="Area2D" type="Area2D" parent="." unique_id=244823748]
+
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1554738007]
 offset_left = -573.0
 offset_top = -323.0
@@ -792,7 +794,7 @@ scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_5cnf4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1609280946]
-position = Vector2(100, 21)
+position = Vector2(2, 7.5)
 shape = SubResource("RectangleShape2D_xur1g")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1050252584]
