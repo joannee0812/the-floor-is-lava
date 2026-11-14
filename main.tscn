@@ -20,7 +20,6 @@ animations = [{
 size = Vector2(133, 134)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lquwl"]
-load_path = "res://.godot/imported/lava.png-362957d11c12c0ad41755679afebc004.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_272bh"]
 texture = SubResource("CompressedTexture2D_lquwl")
@@ -38,7 +37,6 @@ texture = SubResource("CompressedTexture2D_lquwl")
 3:3/0 = 0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7mycd"]
-load_path = "res://.godot/imported/lava 2.png-e822f28c7097f284d6eb328b92d8e1c7.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vw27"]
 texture = SubResource("CompressedTexture2D_7mycd")
