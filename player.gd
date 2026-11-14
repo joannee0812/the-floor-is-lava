@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 50
-const JUMP_VELOCITY = -40.0
+const JUMP_VELOCITY = -200.0
 
 
 var screen_size: Vector2
@@ -16,11 +16,19 @@ func _physics_process(delta: float) -> void:
 	# theta_mourse = theta(v->)
 	look_at(get_global_mouse_position())
 	
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+		
+	if Input.is_action_just_pressed("ui_accept"):
+		velocity.y = JUMP_VELOCITY
+	
 	
 	
 	# SCREEN WRAP
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
+	
+	move_and_slide()
 
 
 #func _physics_process(delta: float) -> void:
