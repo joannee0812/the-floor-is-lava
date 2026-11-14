@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d13q1jv0hvjsh"]
+
+[ext_resource type="Script" uid="uid://dq7x3s8nwm5t7" path="res://stopwatch.gd" id="1_jewno"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pb3r0"]
+
+[node name="stopwatch" type="Node2D" unique_id=1913564622 groups=["stopwatch"]]
+script = ExtResource("1_jewno")
+
+[node name="Label" type="Label" parent="." unique_id=1052713817]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+scale = Vector2(0.30768973, 0.95946616)
+label_settings = SubResource("LabelSettings_pb3r0")
