@@ -1,15 +1,38 @@
-extends Timer
+extends CanvasLayer
+
+@onready var timer_label: Label = $Label
+
+@export var start_time: float = 120.0  # seconds
+var time_left: float = 0.0
+var running := true
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	timer_label.position = Vector2(20, 20)
+	timer_label.add_theme_font_size_override("font_size", 32)
+	print("Timer UI loaded")
+	time_left = start_time
+	_update_label()
+	
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if not running:
+		return
+
+	time_left -= delta
+	if time_left <= 0.0:
+		time_left = 0.0
+		running = false
+		time_up()
+
+	_update_label()
 
 
-func _on_timeout() -> void:
-	print("Time's up! U lose lol.")
+func _update_label() -> void:
+	var total := ceili(time_left)
+	timer_label.text = "%02d:%02d" % [total / 60, total % 60]
+
+
+func time_up() -> void:
+	print("Time's up!")  # game over logic goes here

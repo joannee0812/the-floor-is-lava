@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cfc6b7oxcoq2m"]
 
+[ext_resource type="Script" uid="uid://u1ghyx3vdniw" path="res://timer.gd" id="1_dg77c"]
 [ext_resource type="Script" uid="uid://ciawwni8wgc3c" path="res://player.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://jm6hcbqitjya" path="res://pekerja.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://s5q1c6i54hmf" path="res://concrete board but better.png" id="2_4c57u"]
@@ -820,9 +821,7 @@ autostart = true
 ignore_time_scale = true
 script = ExtResource("7_dg77c")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Timer" unique_id=136580946]
-
-[node name="Label" type="Label" parent="Timer/CanvasLayer" unique_id=1107564409]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1107564409]
 anchors_preset = -1
 anchor_left = -0.060000002
 anchor_top = -0.081
