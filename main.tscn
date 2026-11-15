@@ -1,17 +1,16 @@
 [gd_scene format=4 uid="uid://cfc6b7oxcoq2m"]
 
+[ext_resource type="Script" uid="uid://u1ghyx3vdniw" path="res://timer.gd" id="1_dg77c"]
 [ext_resource type="Script" uid="uid://ciawwni8wgc3c" path="res://player.gd" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://jm6hcbqitjya" path="res://pekerja.png" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://s5q1c6i54hmf" path="res://concrete board but better.png" id="2_4c57u"]
 [ext_resource type="Texture2D" uid="uid://cjtsffhntf475" path="res://lava big.png" id="4_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://d1umbgjersrx5" path="res://wall.png" id="5_7mycd"]
 [ext_resource type="Script" uid="uid://bll02dorymy8t" path="res://vector_creator.gd" id="5_kek77"]
-[ext_resource type="Texture2D" uid="uid://dcuj63fcaacdn" path="res://concrete board.png" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://6bhobc2pubmq" path="res://brick wall.png" id="6_272bh"]
 [ext_resource type="Texture2D" uid="uid://bxuqsv4bsouku" path="res://door.png" id="7_5vw27"]
 [ext_resource type="Texture2D" uid="uid://cbco350846m7n" path="res://key2.png" id="8_5vw27"]
 [ext_resource type="Texture2D" uid="uid://dmobu2xvhpk6g" path="res://spike easy.png" id="9_efxa6"]
-[ext_resource type="PackedScene" uid="uid://d13q1jv0hvjsh" path="res://stopwatch.tscn" id="10_dg77c"]
 [ext_resource type="FontFile" uid="uid://deii46qvbk813" path="res://vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" id="11_efxa6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5cnf4"]
@@ -818,8 +817,8 @@ scale = Vector2(1.6367189, 1.5546875)
 texture = ExtResource("6_272bh")
 
 [node name="Sprite2D5" type="Sprite2D" parent="." unique_id=259163802]
-position = Vector2(470.00003, 16)
-scale = Vector2(1.6367189, 1.5546875)
+position = Vector2(470.625, 16)
+scale = Vector2(1.6464843, 1.5546875)
 texture = ExtResource("6_272bh")
 
 [node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1369010424]
@@ -845,28 +844,16 @@ texture = ExtResource("9_efxa6")
 position = Vector2(282, -90)
 texture = ExtResource("9_efxa6")
 
-[node name="stopwatch" parent="." unique_id=1913564622 instance=ExtResource("10_dg77c")]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=136580946]
+layer = 100
+script = ExtResource("1_dg77c")
 
-[node name="Timer" type="Timer" parent="." unique_id=327151160]
-wait_time = 67.677
-one_shot = true
-autostart = true
-ignore_time_scale = true
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Timer" unique_id=136580946]
-
-[node name="Label" type="Label" parent="Timer/CanvasLayer" unique_id=1107564409]
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1107564409]
 anchors_preset = -1
-anchor_left = -0.060000002
-anchor_top = -0.081
-anchor_right = -0.060000002
-anchor_bottom = -0.074
-offset_left = -24.879997
-offset_top = -175.512
-offset_right = 24.120003
-offset_bottom = -150.048
+offset_left = -445.0
+offset_top = -296.0
+offset_right = -239.0
+offset_bottom = -267.0
 theme_override_fonts/font = ExtResource("11_efxa6")
 theme_override_font_sizes/font_size = 32
-text = "Timer:00.00"
-
-[connection signal="timeout" from="Timer" to="Player" method="_on_timer_timeout"]
+text = "01:00"
