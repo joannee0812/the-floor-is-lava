@@ -1501,11 +1501,11 @@ position = Vector2(-570, -322)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platformB" unique_id=1573765409]
 z_index = 2
-position = Vector2(575.5, 133.5)
+position = Vector2(580, 197)
 shape = SubResource("RectangleShape2D_ve7ef")
 
 [node name="Sprite2D3" type="Sprite2D" parent="platformB" unique_id=1901781181]
-position = Vector2(575, 106)
+position = Vector2(581, 170)
 scale = Vector2(2.3203125, 1.6718751)
 texture = ExtResource("2_4c57u")
 
@@ -1589,12 +1589,12 @@ shape = SubResource("RectangleShape2D_xu6bv")
 position = Vector2(-18, -161)
 
 [node name="Sprite2D" type="Sprite2D" parent="Spike1" unique_id=1812509741]
-position = Vector2(85.00001, -65)
+position = Vector2(86, -3)
 scale = Vector2(1.44, 1.5266666)
 texture = ExtResource("9_efxa6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spike1" unique_id=1625809087]
-position = Vector2(51.5, -66.75)
+position = Vector2(54, -6)
 shape = SubResource("RectangleShape2D_a6d3c")
 
 [node name="Spike3" type="StaticBody2D" parent="." unique_id=1775863183]
