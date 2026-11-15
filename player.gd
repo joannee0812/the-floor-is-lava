@@ -8,11 +8,18 @@ var MAX_LENGTH := 200
 @export var coeff_restit := 0.7
 @export var minimum_bounce_speed := 80.0
 
+@onready var lava: TileMapLayer = get_node("../Lava")
+var spawn_position: Vector2
+
+
+
 var screen_size: Vector2
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	$VectorCreator.vector_created.connect(_on_vector_created)
+	spawn_position = global_position
+	
 	
 func _on_vector_created(vector: Vector2) -> void:
 	velocity = vector * 2	
@@ -35,6 +42,11 @@ func _physics_process(delta: float) -> void:
 	
 	for i in get_slide_collision_count():
 		var normal := get_slide_collision(i).get_normal()
+		var collision := get_slide_collision(i)
+		if collision.get_collider() == lava:
+			die()
+			return
+			
 		var impact_speed := pre_velocity.dot(-normal)
 		if impact_speed > minimum_bounce_speed:
 			velocity = pre_velocity.bounce(normal) * coeff_restit
@@ -64,7 +76,9 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	'''
-
+func die() -> void:
+	global_position = spawn_position
+	velocity = Vector2.ZERO
 
 
 		
