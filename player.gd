@@ -10,6 +10,11 @@ var screen_size: Vector2
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
+	$VectorCreator.vector_created.connect(_on_vector_created)
+	
+func _on_vector_created(vector: Vector2) -> void:
+	velocity = vector * 2	
+	
 
 func _physics_process(delta: float) -> void:
 	# Use mouse to pull a vector of scaled magnitude (velocity) and direction
@@ -26,8 +31,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	# SCREEN WRAP
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
+
 	
 	move_and_slide()
 

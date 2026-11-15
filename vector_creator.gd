@@ -14,13 +14,11 @@ var res_vector := Vector2.ZERO
 func _ready() -> void:
 	input_event.connect(_on_input_event)
 	print("VectorCreator ready")
-	input_event.connect(_on_input_event)
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-	#TODO
+
 	
 func _input(event)	-> void:
 	
@@ -41,6 +39,7 @@ func _input(event)	-> void:
 	
 
 func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int):
+	print("event: ", event) 
 	if event.is_action_pressed("ui_touch"):
 		touched_down = true
 		position_start = get_global_mouse_position()
