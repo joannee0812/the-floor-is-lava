@@ -11,3 +11,4 @@ func _process(delta):
 
 func reset():
 	time=0.0
+	
