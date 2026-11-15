@@ -1,6 +1,9 @@
 extends CanvasLayer
 
 @onready var timer_label: Label = $Label
+@export var death_screen_scene: PackedScene = preload("res://YouDied.tscn")
+
+var is_dead = false
 
 @export var start_time: float = 120.0  # seconds
 var time_left: float = 0.0
@@ -35,4 +38,7 @@ func _update_label() -> void:
 
 
 func time_up() -> void:
-	print("Time's up!")  # game over logic goes here
+	print("Time's up!")
+	 # game over logic goes here
+	var death_screen = death_screen_scene.instantiate()
+	get_tree().current_scene.add_child(death_screen)

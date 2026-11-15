@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://wt1ca5mvn21g"]
+
+[ext_resource type="Texture2D" uid="uid://bfnj6ey18jocj" path="res://youdiedscreen.png" id="1_quowb"]
+
+[node name="Node" type="Node" unique_id=156073443]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2072855162]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1192646742]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_quowb")

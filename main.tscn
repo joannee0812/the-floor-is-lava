@@ -1560,15 +1560,15 @@ texture = ExtResource("6_272bh")
 position = Vector2(648.5537, 0.64321613)
 shape = SubResource("RectangleShape2D_ci6nl")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1671206809]
+[node name="Door" type="StaticBody2D" parent="." unique_id=1671206809]
 position = Vector2(517, -126.999985)
 scale = Vector2(0.7109375, 0.703125)
 
-[node name="Sprite2D6" type="Sprite2D" parent="StaticBody2D3" unique_id=1369010424]
+[node name="Sprite2D6" type="Sprite2D" parent="Door" unique_id=1369010424]
 position = Vector2(0.00012207031, -1.5258789e-05)
 texture = ExtResource("7_5vw27")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1499620673]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1499620673]
 position = Vector2(7.032959, -1.4222412)
 shape = SubResource("RectangleShape2D_g36yi")
 

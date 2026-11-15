@@ -12,6 +12,9 @@ var MAX_LENGTH := 200
 @onready var Spike1: StaticBody2D = get_node("../Spike1")
 @onready var Spike2: StaticBody2D = get_node("../Spike2")
 @onready var Spike3: StaticBody2D = get_node("../Spike3")
+@onready var Door: StaticBody2D = get_node("../Door")
+
+@export var win_screen_scene: PackedScene = preload("res://winscreen.tscn")
 
 @onready var hazards := [lava, Spike1, Spike2, Spike3]
 var spawn_position: Vector2
@@ -49,8 +52,12 @@ func _physics_process(delta: float) -> void:
 		var normal := get_slide_collision(i).get_normal()
 		var collision := get_slide_collision(i)
 		if collision.get_collider() in hazards:
-			die()
+			reset()
 			return
+		
+		elif collision.get_collider() == Door:
+			win()
+			
 			
 		var impact_speed := pre_velocity.dot(-normal)
 		if impact_speed > minimum_bounce_speed:
@@ -81,11 +88,13 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	'''
-func die() -> void:
+func reset() -> void:
 	global_position = spawn_position
 	velocity = Vector2.ZERO
 
-
+func win() -> void:
+	var win_screen = win_screen_scene.instantiate()
+	get_tree().current_scene.add_child(win_screen)
 		
 
 
