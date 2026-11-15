@@ -5,6 +5,8 @@ const SPEED = 50
 const JUMP_VELOCITY = -200.0
 var MAX_LENGTH := 200
 
+@export var coeff_restit := 0.7
+@export var minimum_bounce_speed := 80.0
 
 var screen_size: Vector2
 
@@ -28,10 +30,15 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		velocity.y = JUMP_VELOCITY
 	
+	var pre_velocity := velocity
+	move_and_slide()
 	
-	
-	# SCREEN WRAP
-
+	for i in get_slide_collision_count():
+		var normal := get_slide_collision(i).get_normal()
+		var impact_speed := pre_velocity.dot(-normal)
+		if impact_speed > minimum_bounce_speed:
+			velocity = pre_velocity.bounce(normal) * coeff_restit
+			break
 	
 	move_and_slide()
 
